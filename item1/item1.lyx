@@ -69,6 +69,10 @@
 \begin_body
 
 \begin_layout Standard
+Considerando a função do Erro Médio Quadrático:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\frac{1}{N}\sum_{k=1}^{N}\left(t_{k}-\left(w_{0}+w_{1}x_{k}\right)\right)^{2}$
 \end_inset
 
@@ -76,7 +80,8 @@
 \end_layout
 
 \begin_layout Standard
-Se 
+...
+ 
 \end_layout
 
 \begin_layout Standard
@@ -87,7 +92,7 @@ Se
 \end_layout
 
 \begin_layout Standard
-Continuando
+...
 \end_layout
 
 \begin_layout Standard
@@ -109,11 +114,21 @@ Simplificando
 \end_layout
 
 \begin_layout Standard
-Derivada parcial em função de 
+Podemos observar que a função acima é um polinômio de grau 2 em relação
+ a 
 \begin_inset Formula $w_{0}$
 \end_inset
 
-e igualando a 0
+ e que seu ponto minimo local pode ser calculado se obtermos sua derivada
+ parcial em função de 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+, isto é, a taxa de variação do erro em relação a 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ mantendo todo o resto constante, e igualarmos a 0.
 \end_layout
 
 \begin_layout Standard
@@ -157,11 +172,47 @@ Sabemos que:
 \end_layout
 
 \begin_layout Standard
-Aplicando:
+Aplicando, obtemos:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $-2\overline{t}_{k}+2\overline{w}_{0}+2w_{1}\overline{x}_{k}$
+\begin_inset Formula $-2\overline{t}_{k}+2\overline{w}_{0}+2w_{1}\overline{x}_{k}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\overline{w}_{0}=\overline{t}_{k}-w_{1}\overline{x}_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da mesma forma a função do Erro Médio Quadrático é um polinômio de grau
+ 2 em relação a 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+ e seu ponto minimo local pode ser calculado se obtermos sua derivada parcial
+ em função de 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+, isto é, a taxa de variação do erro em relação a 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+ mantendo todo o resto constante, e igualarmos a 0, nesse caso obteremos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{1}=\frac{\overline{xt}-\overline{x}\overline{t}}{\overline{x^{2}}-\left(\overline{x}\right)^{2}}$
 \end_inset
 
 

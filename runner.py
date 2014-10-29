@@ -51,13 +51,13 @@ print(stats.linregress(test_x, test_y));
 def rejectPearsonNullHypothesis(data, alpha):
 	N = len(data[:,0]);
 	slope, intercept, r_value, p_value, std_err = stats.linregress(data)
-	tval = t.isf(alpha/2, df)
+	tval = t.isf(alpha/2, N-2)
 	test = (r_value*math.sqrt(N-2))/(math.sqrt(1-r_value**2))
 	print("%0.4f > %0.4f" % (math.fabs(test), tval))
 	return math.fabs(test) > tval
 	
-rejected = rejectKendallNullHypothesis(data, 0.05);
+rejected = rejectPearsonNullHypothesis(data, 0.05);
 print("Pearson: Hipotese nula rejeitada(95%% de significancia): %s" % rejected);
 
-rejected = rejectKendallNullHypothesis(data, 0.01);
+rejected = rejectPearsonNullHypothesis(data, 0.01);
 print("Pearson: Hipotese nula rejeitada(95%% de significancia): %s" % rejected);

@@ -65,6 +65,7 @@ print("TOTAL: MAPE: %0.4f" % MAPE);
 
 model_ransac = linear_model.RANSACRegressor(linear_model.LinearRegression())
 model_ransac.fit(np.array(X_array), Y)
+print(model_ransac.estimator_.coef_, model_ransac.estimator_.intercept_)
 Y_ransac = model_ransac.predict(X_array)
 MSE = metrics.mean_squared_error(Y, Y_ransac)
 RMSE = math.sqrt(MSE)
